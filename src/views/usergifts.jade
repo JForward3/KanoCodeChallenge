@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    title=activeUser.name
+    h1= `Welcome ${activeUser.name}!`
+
+    h3= `Pending Gifts`
+
+    -let i = 0;
+    div.friendsList
+        -if(gifts.length < 1){
+        h4= "No Gifts Available!"
+        -}
+        each gift in gifts
+            div.friend
+                div.friend-row
+                    img.enabled(src=senders[i].img)
+                    //img.disabled(src=gift.img)
+                    span
+                        img.disabled(src=gift.img)
+                        span=senders[i].name 
+                        input(type="button", class="button", value="Receive Gift", onclick="receiveGift(#{activeUser.id},#{senders[i].id})")
+                        -i++;
+                        
+        input(type="button", class="button", value="Receive All Gifts", onclick="receiveAll(#{activeUser.id})")
+
+
+        

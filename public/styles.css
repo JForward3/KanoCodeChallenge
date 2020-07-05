@@ -1,0 +1,83 @@
+body{
+  font: normal 20px Verdana, Arial;
+  background-color: rgb(204, 207, 207);
+}
+
+h1{
+  font: bold 40px Verdana, Arial;
+  text-align: center;
+}
+
+h4{
+  text-align: center;
+}
+
+h6{
+  text-align: center;
+}
+
+.button{
+  color: white;
+  background-color: rgb(214, 14, 0);
+  border-radius: 4px;
+  border-color: black;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+.button1{
+  color: white;
+  background-color: rgb(214, 14, 0);
+  border-radius: 4px;
+  border-color: black;
+  font-size: 14px;
+  padding: 12px 20px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+select{
+  font-size: 20px;
+  padding: 5px;
+}
+
+footer{
+  text-align: center;
+  padding: 5px;
+  padding-top: 20px;
+}
+
+.friendsList{
+  width: 465px;
+  padding: 2px;
+  border-style: solid;
+}
+
+.friend-row span {
+  vertical-align:middle;
+  padding: 20px;
+}
+
+.friend-row img {
+  vertical-align:middle;
+}
+
+.friend {
+  width: 450px;
+  height: 100px;
+  padding: 5px;
+  border-style: groove;
+}
+
+img.disabled {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+img.enabled {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: 0px -100px;
+}

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    title= user.name
+    h1= `Welcome ${user.name}!`
+
+    form(action="../gift/check_gifts", method="post")
+        input(type="hidden", name="recipient" value="#{user.id}")
+        input(type="submit", class="button", value="Check Gifts")
+
+    h3= `Friends`
+    -let i = 0;
+
+    div.friendsList
+        each friend in friends
+            div.friend
+                div.friend-row
+                    img.enabled(src=friend.img)
+                    span=friend.name
+                        span
+                        label(for="itemVal") 
+                            select(name="itemVal", id="#{'itemVal'+i}")
+                                option(value="1") Sword
+                                option(value="2") Shield
+                        input(type="button", class="button1", value="Send Gift", onclick="sendGift(#{user.id},#{friend.id}, #{'itemVal'+i}.value)")
+                        -i++;
+        label(for="itemValue") 
+            select(name="itemValue", id="itemValue")
+                option(value="1") Sword
+                option(value="2") Shield
+        input(type="button", class="button1", value="Send Gift To All", onclick="sendAll(#{user.id}, itemValue.value)")
+

@@ -1,0 +1,19 @@
+{
+  "name": "kanointerview",
+  "version": "1.0.0",
+  "description": "Social games revolve around virality, and building connections at their core. We would like you to build a simple two way gifting API, for users to interact with one another in a social game environment.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
